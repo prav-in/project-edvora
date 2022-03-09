@@ -1,0 +1,32 @@
+@use "./variables" as var;
+
+.navbar {
+  margin-top: var.$headerHeight;
+  height: 71px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__filters {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: 500;
+
+    & li {
+      margin-right: 30px;
+      cursor: pointer;
+
+      &:hover {
+        border-bottom: 1px solid white;
+      }
+    }
+
+    .selected {
+      border-bottom: 2px solid white;
+      font-weight: 600;
+    }
+  }
+}

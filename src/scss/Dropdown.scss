@@ -1,0 +1,64 @@
+@use "./variables" as var;
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-right: 40px;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 1.2rem;
+    font-weight: 500;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  .dropdown__btn {
+    width: 40px;
+    height: 40px;
+    margin-right: 4px;
+  }
+
+  &__content {
+    position: absolute;
+    top: 40px;
+    right: 5px;
+    background-color: rgb(0, 0, 0);
+    width: 228px;
+    height: 190px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 7%;
+    transform-origin: right top;
+
+    &__title {
+      width: 75%;
+      height: 18%;
+      margin: 20px auto;
+      padding-left: 10px;
+      border-bottom: 1px solid white;
+      font-size: 1.3rem;
+      color: gray;
+    }
+
+    .selection {
+      width: 75%;
+      height: 20%;
+      margin: 15px auto;
+      padding-left: 10px;
+      border-radius: 5px;
+      display: block;
+      font-size: 1rem;
+      border: none;
+      outline: none;
+      background: var.$bg;
+      color: var.$color-text;
+    }
+  }
+}

@@ -1,0 +1,34 @@
+@use "./variables" as var;
+
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+  height: var.$headerHeight;
+  background: var.$color-primary;
+
+  &__title {
+    position: absolute;
+    left: 43px;
+    top: 21px;
+  }
+
+  &__user {
+    position: absolute;
+    right: 40px;
+    top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    font-weight: 400;
+
+    & img {
+      border-radius: 100%;
+      height: 45px;
+      width: 45px;
+      margin-left: 25px;
+    }
+  }
+}

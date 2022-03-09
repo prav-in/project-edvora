@@ -1,0 +1,20 @@
+// measurements
+
+$headerHeight: 84px;
+$navHeight: 81px;
+
+// colors
+$bg: #282928;
+$color-text: white;
+$color-primary: #101010;
+$color-secondary: #171717;
+
+// media
+
+@mixin breakpoint($point) {
+  @if $point == md {
+    @media (max-width: 900px) {
+      @content;
+    }
+  }
+}
